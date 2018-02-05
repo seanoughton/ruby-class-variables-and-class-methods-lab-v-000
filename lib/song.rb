@@ -15,11 +15,30 @@ class Song
 
   attr_accessor :name, :artist, :genre
 
-  def count
+  def self.count
     @@count
   end
 
-  
+  def self.genres
+    return_array = []
+    @@genres.each do |element|
+      if !(return_array.include?(element))
+        return_array << element
+      end
+    end
+    return_array
+  end
+
+  def self.artists
+      return_array = []
+      @@artists.each do |element|
+        if !(return_array.include?(element))
+          return_array << element
+        end
+      end
+      return_array
+  end
+
 
 
 
