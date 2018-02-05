@@ -39,6 +39,17 @@ class Song
       return_array
   end
 
+  def self.genre_count
+    return_hash = {}
+    @@genres.each do |element|
+      if return_hash.include?(element)
+        return_hash[element] += 1
+      else
+        return_hash[element] = 1
+      end
+    end
+    return_hash
+  end
 
 
 
