@@ -8,6 +8,7 @@ class Song
     @genre = genre
     @artist = artist
     @@count +=1
+    @@genres 
   end
 
   attr_accessor :name, :artist, :genre
@@ -17,6 +18,7 @@ class Song
   end
 
   def genres
+
   end
 
 
