@@ -8,7 +8,7 @@ class Song
     @genre = genre
     @artist = artist
     @@count +=1
-    @@genres 
+    @@genres << genere
   end
 
   attr_accessor :name, :artist, :genre
@@ -17,8 +17,14 @@ class Song
     @@count
   end
 
-  def genres
-
+  def self.genres
+    return_array = []
+    @@genres.each do |element|
+      if !(return_array.include?(element))
+        return_array << element
+      end
+    end
+    return_array
   end
 
 
