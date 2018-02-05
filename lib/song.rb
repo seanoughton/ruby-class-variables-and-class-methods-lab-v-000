@@ -4,4 +4,8 @@ class Song
     @genre = genre
     @artist = artist
   end
+
+  attr_accessor :name, :artist, :genre
+
+
 end
